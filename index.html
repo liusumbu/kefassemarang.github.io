@@ -6,6 +6,33 @@
     <title>Kefas Semarang</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .image-container {
+            position: relative;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 600px; /* Atur lebar maksimum gambar */
+            height: auto; /* Menjaga rasio aspek */
+            border-radius: 10px; /* Tambahkan sudut membulat */
+            transition: transform 0.3s; /* Efek transisi saat hover */
+        }
+        .image-container img:hover {
+            transform: scale(1.05); /* Efek zoom saat hover */
+        }
+        .image-info {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -27,27 +54,30 @@
                 <div class="bar"></div>
             </div>
             <div class="dark-mode-toggle" onclick="toggleDarkMode()">
-                <i class="fas fa-sun"></i> <!-- Ikon matahari dari Font Awesome -->
+                <i class="fas fa-sun"></i>
             </div>
         </div>
-    </header>       
+    </header>
 
     <section id="home" class="section">
         <div class="container">
-            <h2 style="text-align: center;">Mengenal Kefas</h2><br>
-            <!-- Video -->
-            <video class="hero-video" controls>
-                <source src="videos/Kefas.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>Kami adalah komunitas orang percaya yang berdedikasi untuk menyembah Tuhan dan melayani sesama.</p>
-            
-            
-            <!-- Daftar file akan dihasilkan oleh PHP -->
-            <p>Di sini Anda dapat menemukan berbagai kegiatan dan pelayanan yang kami tawarkan. Kami berharap Anda merasa nyaman dan diterima di komunitas kami.</p>
+            <h2 class="section-title">Mengenal Kefas</h2><br>
+            <div class="video-container">
+                <video class="responsive-video" controls>
+                    <source src="videos/kefas.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-description">
+                <p>
+                    Kami adalah komunitas orang percaya yang berdedikasi untuk menyembah Tuhan dan melayani sesama.
+                </p>
+                <p>
+                    Di sini Anda dapat menemukan berbagai kegiatan dan pelayanan yang kami tawarkan. Kami berharap Anda merasa nyaman dan diterima di komunitas kami.
+                </p>
+            </div>
         </div>
-    </section>
-    
+    </section>      
 
     <section id="about" class="section" style="display:none;">
         <div class="container">
@@ -57,52 +87,58 @@
                 Kami menyediakan ruang untuk belajar, berbagi pengetahuan, dan memperdalam iman melalui studi Alkitab dan pertemuan kelompok. Bergabunglah dengan kami untuk memperkuat pemahaman iman Anda dan membangun hubungan yang lebih dalam dengan sesama anggota.</p>
         </div>
     </section>
-    
 
     <section id="services" class="section" style="display:none;">
         <div class="container">
             <h2>Kegiatan Kami</h2>
-            <div class="video-grid">
-                <div class="video-item">
-                    <h3>Open House</h3>
-                    <div class="video-wrapper">
-                        <video controls>
-                            <source src="videos/openhouse.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+            <div class="image-grid">
+                <div class="event">
+                    <h3>1. Kefas Gathering</h3>
+                    <div class="image-row">
+                        <div class="image-container">
+                            <img src="images/galery/1.JPG" alt="Kefas Gathering - Image 1">
+                        </div>
+                        <div class="image-container">
+                            <img src="images/galery/2.JPG" alt="Kefas Gathering - Image 2">
+                        </div>
                     </div>
                 </div>
-                <div class="video-item">
-                    <h3>Welcome Dinner</h3>
-                    <div class="video-wrapper">
-                        <video controls>
-                            <source src="videos/welcomedinner.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                <div class="event">
+                    <h3>2. Seminar</h3>
+                    <div class="image-row">
+                        <div class="image-container">
+                            <img src="images/galery/3.jpg" alt="Seminar - Image 1">
+                        </div>
+                        <div class="image-container">
+                            <img src="images/galery/4.JPG" alt="Seminar - Image 2">
+                        </div>
                     </div>
                 </div>
-                <div class="video-item">
-                    <h3>Campus Meeting</h3>
-                    <div class="video-wrapper">
-                        <video controls>
-                            <source src="videos/kefasinjil.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                <div class="event">
+                    <h3>3. Open House</h3>
+                    <div class="image-row">
+                        <div class="image-container">
+                            <img src="images/galery/5.JPG" alt="Open House - Image 1">
+                        </div>
+                        <div class="image-container">
+                            <img src="images/galery/6.JPG" alt="Open House - Image 2">
+                        </div>
                     </div>
                 </div>
-                <div class="video-item">
-                    <h3>Kefas Injil</h3>
-                    <div class="video-wrapper">
-                        <video controls>
-                            <source src="videos/cm.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                <div class="event">
+                    <h3>4. Sport Day</h3>
+                    <div class="image-row">
+                        <div class="image-container">
+                            <img src="images/galery/7.JPG" alt="Community Service - Image 1">
+                        </div>
+                        <div class="image-container">
+                            <img src="images/galery/8.JPG" alt="Community Service - Image 2">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    
+    </section>       
     
 
     <section id="contact" class="section" style="display:none;">
@@ -136,25 +172,23 @@
             <div class="contact-item">
                 <i class="fa fa-envelope"></i>
                 <p>Email: kefassemarang@gmail.com</p>
-            </div>cr
+            </div>
         </div>
     </section>
-    
+
     <script>
     function sendToWhatsApp() {
         var name = document.getElementById('name').value;
         var email = document.getElementById('email').value;
         var message = document.getElementById('message').value;
-        
+
         var whatsappNumber = "62822229094416"; // Ganti dengan nomor WhatsApp Anda
         var whatsappMessage = `Nama: ${name}%0AEmail: ${email}%0APesan: ${message}`;
         var whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-        
+
         window.open(whatsappURL, '_blank');
     }
     </script>
-    
-    
 
     <footer>
         <div class="container">
